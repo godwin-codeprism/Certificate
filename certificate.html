@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Certificate</title>
+    <style>
+        @font-face {
+            font-family: MonotypeCorsiva;
+            src: url('fonts/MTCORSVA_0.TTF');
+        }
+
+        * {
+            margin: auto;
+        }
+        
+        .main {
+            background-image: url(bg.jpg);
+            height: 755px;
+            width: 1100px;
+            background-repeat: no-repeat;
+            border: 1px solid #eee;
+        }
+        
+        .head {
+            font-family: MonotypeCorsiva;
+            font-size: 66px;
+            text-align: center;
+            padding-top: 60px;
+            color: #886a32;
+        }
+        
+        .sub {
+            font-family: Times New Roman;
+            font-size: 16px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .name {
+            height: 80px;
+            text-align: center;
+            font-family: Times New Roman;
+            font-size: 40PX;
+            color: #154260;
+        }
+        
+        .text {
+            font-family: Times New Roman;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .picow {
+            font-family: Times New Roman;
+            font-size: 18PX;
+            text-align: center;
+            color: #154260;
+            padding: 15px;
+        }
+        
+        .date {
+            font-family: Times New Roman;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .dt {
+            font-family: Times New Roman;
+            font-size: 20px;
+            text-align: center;
+            color: #154260;
+            height: 65px;
+        }
+        
+        .list {
+            font-family: Times New Roman;
+            font-size: 10px;
+            color: #0c344e;
+            text-align: left;
+        }
+        
+        p {
+            padding-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="head">Certificate of Appreciation</div>
+		<br><br>
+        <div class="name" id="name_txt"></div>
+        <div class="text">is thanked and appreciated for successfully completing the Online Course on “Drunken Drive Awareness Program”,<br> an initiative taken up by “Swift elearning Services” and “Youth Against Speed”</div>
+		<br><br><br><br><br><br><br><br><br><br><br>
+		<div class="picow">Note: This certificate is computer generated and does not require any Seal/Signature in original.</div>
+        <br>
+		<div class="date">Course Completion Date</div>
+        <div class="dt" id="date_txt">June 25,2016</div>
+    </div>
+    <script type="text/javascript">
+        var name = localStorage.Certificate;
+        var date = new Date();
+        var currentyear = date.getFullYear();
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        var currentMonth = month[date.getMonth()];
+        var currentday = date.getDate();
+        var fullDate = currentMonth + " " + currentday + ", " + currentyear;
+        document.getElementById('name_txt').innerHTML = name;
+        document.getElementById('date_txt').innerHTML = fullDate;
+        //window.print();
+    </script>
+</body>
+
+</html>
